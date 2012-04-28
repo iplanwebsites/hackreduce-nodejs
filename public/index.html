@@ -115,6 +115,7 @@
           // .script("/js/libs/backbone.localStorage.modified.js").wait() // Overide the Sync method, AGAIN!...
           .script("/js/libs/backbone.analytics.js").wait()
 
+          .script("/js/libs/geohash.js")
           // Bootstrap
           .script("/js/libs/bootstrap.min.js")
           .script("/js/libs/bootstrap-button.js")
@@ -195,13 +196,26 @@
 </ul>
 
         <!--/////////////////////////////////////////////////////////////////
-       //       Detail
+       //       Footer
       ////////////////////////////////////////////////////////////////-->
 
+<div class="clear"> </div>
+
+<div class="container ">
+      <footer class="footer row">
+                  <p class="pull-right"><a href="#" class="scroll-top">Back to top</a></p>
 
 
+                  <p>Build during Hack/Reduce hackothon in Montreal in April 2012.</p>
 
+                  <p>Based on data from <a href="http://www.gtfs-data-exchange.com/" target="_blank"> GTFS data exchange</a>.</p>
+                  
 
+                  <p>We are looking for AA players to <a href="http://robots4humans.com" target="_blank">join our ranks</a>.</p>
+
+                </footer>
+
+</div>
          <!--/////////////////////////////////////////////////////////////////
        //     Templates - cities
       ////////////////////////////////////////////////////////////////-->

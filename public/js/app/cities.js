@@ -50,12 +50,15 @@ var City = Backbone.Model.extend({
         model: City,
         // url: "/js/people.json",
          url: "/api/city/",
+         url: "/toronto.json",
        // dataType: "jsonp",
        
         initialize: function() { 
           // Fetch user fromqw server...
           // do local stuff, possibly validation, units, etc
           console.log('city created!' + this.get('name'));
+          
+          this.set('loc', decodeGeoHash(this.get('geohash')));
 
           this.on("add", function(p) {
             console.log("Ahoy " + p.get("name") + " has been added!");

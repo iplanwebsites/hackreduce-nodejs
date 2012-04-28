@@ -45,9 +45,10 @@ var Ui = Backbone.View.extend({
      console.log(peeps);
      p = peeps;
      console.log(peeps.length);
-     _.each(peeps, function(item){ 
-         html += _.template( templ , item.attributes );
-      });
+     
+     //_.each(peeps, function(item){ 
+       //  html += _.template( templ , item.attributes );
+     // });
       console.log(peeps.length);
       
      var grid = {
@@ -75,7 +76,8 @@ var Ui = Backbone.View.extend({
         id: 'stm',
         pie_url: 'https://chart.googleapis.com/chart?cht=p&chd=s:Uf9a&chs=200x100'+'&chco=ffff00,FF0000'+'&chdl=Great|Ok|Average|Poor',
         population: 3473000,
-        grid: [grid, grid, grid, grid] //poll from the collection
+        //grid: [grid, grid, grid, grid] //poll from the collection
+        grid: peeps
       }
       
       console.log(peeps.length);
@@ -83,9 +85,7 @@ var Ui = Backbone.View.extend({
       console.log(templ2);
       console.log(city)
        html += _.template( templ , city );
-      html += _.template( templ , city );
-      html += _.template( templ , city );
-      html += _.template( templ , city );
+      
       
       
       
