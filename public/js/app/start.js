@@ -4,6 +4,7 @@ $(function(){
   app = new Object();
   app.router = new Router();
   app.ui = new Ui();
+  //
   
   app.cities = new Cities();
   app.cities.fetch({
@@ -11,6 +12,9 @@ $(function(){
       console.log('cities received from server');
       app.ui.showCities();
       Backbone.history.start({pushState: false}); //show time!
+      
+      
+      
     },
     error: function(){
       console.log('ERROR: no cities from server');

@@ -39,7 +39,7 @@ var Ui = Backbone.View.extend({
      var peeps = app.cities.models;
 
 
-     var templ = $("#city_template").html(); 
+     templ = $("#city_template").html(); 
      console.log(templ);
      var html ="";
      console.log(peeps);
@@ -48,9 +48,9 @@ var Ui = Backbone.View.extend({
      _.each(peeps, function(item){ 
          html += _.template( templ , item.attributes );
       });
+      console.log(peeps.length);
       
-      
-      grid = {
+     var grid = {
         loc: [44.1, 22.2],
         geohash: 's92nco',
         city: 'toronto', //unique id
@@ -70,22 +70,64 @@ var Ui = Backbone.View.extend({
           }
         }
       }
-      city = {
+     var city = {
         name: 'Montreal',
         id: 'stm',
+        pie_url: 'https://chart.googleapis.com/chart?cht=p&chd=s:Uf9a&chs=200x100'+'&chco=ffff00,FF0000'+'&chdl=Great|Ok|Average|Poor',
         population: 3473000,
         grid: [grid, grid, grid, grid] //poll from the collection
       }
+      
+      console.log(peeps.length);
+      templ2 = $("#city_template").html(); 
+      console.log(templ2);
+      console.log(city)
+       html += _.template( templ , city );
+      html += _.template( templ , city );
+      html += _.template( templ , city );
       html += _.template( templ , city );
       
-     $('#cities').html(html);//override div content...
+      
+      
+   $('#cities').html(html);//override div content...
+      
+      console.log(peeps.length +'cc');
+      _.each($('#cities .city'), function(item){ 
+        //app.ui.draw_chart(item)
+           
+      });
+        
+     
      
     },
 
     update_browse_sidebar: function(){
       
       //console.log(peeps);
-    }
+    },
+    draw_chart: function(el){
+      console.log('pie')
+            // Create the data table.
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Topping');
+            data.addColumn('number', 'Slices');
+            data.addRows([
+              ['Mushrooms', 3],
+              ['Onions', 1],
+              ['Olives', 1],
+              ['Zucchini', 1],
+              ['Pepperoni', 2]
+            ]);
+
+            // Set chart options
+            var options = {'title':'How Much Pizza I Ate Last Night',
+                           'width':400,
+                           'height':300};
+
+            // Instantiate and draw our chart, passing in some options.
+            var chart = new google.visualization.PieChart( $(el).children('pie')[0] );
+            chart.draw(data, options);
+          }
   
 
 });
