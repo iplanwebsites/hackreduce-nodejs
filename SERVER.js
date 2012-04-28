@@ -139,7 +139,7 @@ app.get('/location', index);
 
 
 app.get('/api/city', function (req, res) { // return ALL cities objects...
-  db.grid.find({precision: "20"}, function(err, cities) {
+  db.grid.find({ precision: "6" }, function(err, cities) {
     if( err || !cities){console.log("No cities of this precision found...");}
     else{ 
       cities.forEach( function(city) {
