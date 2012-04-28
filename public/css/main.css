@@ -1,0 +1,258 @@
+
+/*
+Hot Red: f53704
+hot blue: 51d4ff
+*/
+
+/*/////////////////////////////
+/   Debug / Dev
+///////////*/
+.dev, .navbar .nav > li.dev{display:none;}
+body.debug .dev, body.debug .navbar .nav > li.dev{display:block;}
+
+
+/*///////////////////////////////////////////////
+/   Helpers
+/////////////////////////////*/
+.red{color:#f53704;}
+.r{border:1px solid #f00;}
+.right{float:right;}
+.left{float:left;}
+.hidden{display:none}
+.small{font-size:0.5em;}
+.mini{font-size:0.3em;}
+/*/////////////////////////////
+/   Fonts
+///////////*/
+h1, .sketch, .row.features h2, .sketch, .hand{ font-family:"Sketchetik Light"; font-weight:normal; }
+
+
+/*/////////////////////////////
+/   General
+///////////*/
+body.logged .logged{display:block;}
+body.logged .not-logged{display:none;}
+body.not-logged .logged{display:none;}
+body.not-logged .not-logged{display:block;}
+
+::selection {
+	background: #51d4ff; /* Safari */
+	color:#fff;
+	}
+	
+.google_map_double{width:100%;}
+
+  /*/////////////////////////////
+  /   Loading
+  ///////////*/
+#cache{position:absolute; top:0px; left:0px; width:100%; height:100%; background:#fff; z-index:10015; transition:all 0.3s;}
+#cache.fade{ opacity:0; }
+
+body.loading section{display:none;}
+#cache .loading{
+  position: fixed; color:#aaa; text-align:center;
+  top: 40%;left: 45%;}
+#cache .loading img{display:block; width:32px; height:32px; margin:auto;}
+body{
+  padding-top: 90px;
+  background-color: white;
+  background-image: url(/img/bg/grid-18px-masked.png);
+  background-repeat: repeat-x;
+  background-position: 0 40px;
+  
+}
+
+
+
+/*///////////////////////////////////////////////
+/    Boostrap tweacks and fixes
+/////////////////////////////*/
+header, .btn, button{user-select:none;}
+.modal{display:none}
+header li a i, button i, a i, .ride_meta i{margin-right:8px;}
+
+.btn-huge {
+padding: 18px 28px;
+font-size: 22px;
+line-height: normal;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+}
+
+/* more icons */
+i.icon-tweet{
+  background: url("/img/fb_tweet.png") no-repeat scroll 0 2px transparent;
+  width: 18px;
+  height: 14px;
+  display: inline-block;
+}
+i.icon-fb{
+  background: url("/img/fb_tweet.png") no-repeat scroll 0 0 transparent;
+  width: 18px;
+  height: 15px;
+  display: inline-block;
+  background-position: 0 -35px;
+}
+
+/*///////////////////////////////////////////////
+/    FB UI fixes
+//////////////////////////////////////*/
+/* body .fb_dialog_advanced{ position:fixed; top:60px;} otherwise it pops at the top of the page: stoopid*/
+
+
+/*///////////////////////////////////////////////
+/    TOP NAVBAR
+//////////////////////////////////////*/
+#header .btn.share{margin-right:30px;}
+.navbar .btn-mini{margin-top:10px;}
+#header .brand{
+  margin-right: 20px;
+  float:left;
+  font-size:35px;
+  margin-top:-7px;
+  margin-bottom:-10px;
+  margin-left:5px;
+  font-weight: bold;
+  color: black;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, .1), 0 0 30px rgba(255, 255, 255, .125);
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+.navbar li .badge{margin-left:10px; padding:2px 6px;}
+.navbar li .badge:hover, .navbar li .badge{background:#F89406; }
+
+.navbar .sharrre, .navbar .sharrre li, .navbar .sharrre div{white-space:nowrap; display:inline;}
+.navbar .sharrre li{margin-left:50px;}
+/*///////////////////////////////////////////////
+/    PROMO
+////////////////////////////////////////////*/
+#promo h1.boom{
+  font-size:11.5em; color:#aaa; margin-top:0px; line-height:1.1em; margin-left:-36px; margin-right:-150px; white-space:nowrap;
+  color:#96b0bc; }
+  #promo h1.boom .weroll{color:#ff8c72; }
+#promo .row.features img{margin:auto; width: 135px; height: 135px; padding-right: 70px;  display:block; }
+#promo .row.features{margin-top:0px;}
+#promo .row.features h2{font-size:2.4em;}
+#promo .hero-unit{ 
+  background: #eee url('/img/promo/car.png') no-repeat 150px 20px; 
+  background-size:45%;
+  background-position:181px 33px;
+   height:210px; }
+#promo .hero-unit h1{font-size:45px; margin-bottom:0.2em; }
+
+#promo .hero-unit .leftcol{ margin-top:-30px;  margin-left:-10px;}
+#promo .hero-unit .leftcol h1{ font-size:55px; margin-bottom:0.15em;}
+#promo .hero-unit .rightcol{ padding-top:20px; text-align:right; margin-right:-70px;}
+#promo .hero-unit .rightcol .btn{text-align:left; }
+#promo .hero-unit .rightcol .btn img.arrow{float:right; width:68px; margin-top:-62px; }
+#promo .hero-unit .rightcol .btn{ width:330px; }
+#promo .hero-unit .rightcol .btn p{ font-size:18px; margin-left: -9px;}
+#promo .hero-unit .rightcol p{font-size:14px; line-height:1.2em; padding-top:10px;}
+.navbar img.user_photo_square{width:30px; height:30px;border:#000 1px solid;margin:0; margin-right:10px; margin-bottom:-20px;margin-top:-22px;}
+
+#promo .hero-unit .rightcol .btn-huge{transition:background 0.2s;}
+#promo .hero-unit .rightcol .btn-huge:hover{background:#f53704;}
+
+
+/*///////////////////////////////////////////////
+/    LOcation - ME
+////////////////////////////////////////////*/
+
+#location h1{font-size:6em; color:#aaa; margin-top:0px; margin-bottom:0px; line-height:0.8em; float:right;}
+
+#location .row-top{padding-bottom:60px;padding-top:40px; }
+#location .row-form{margin-bottom:20px; }
+#location .row-map{padding-bottom:20px; }
+#location .row-share{padding-bottom:0px; margin-top:20px; }
+#location .row-top h2, #location .share h2{font-size:47px; color:#f53704;}
+  #location .row-top p{font-size:17px; color:#999;}
+#location form.commute input{font-size:18px; padding:12px;}
+#location form.commute {text-align:right; font-size:40px; color:#129ab8; font-weight:bold; }
+
+#location .price{}
+#location .line.form label{font-size:18px;}
+#location .line.form textarea{width:100%;}
+
+.row-form .span3{margin-top:40px;}
+
+
+.price_stamp{background:#dfdfdf; transform:rotate(-7deg);  transition:all 0.3s; display:block; width:150px; height:75px; text-align:center; color:#999; float:right;}
+
+.price_stamp:hover{transform:rotate(-15deg) ;}
+.price_stamp .title{font-size:13px; font-weight:bold; margin-bottom:12px;}
+.price_stamp .price{font-size:39px; font-weight:bold; margin-bottom:5px; font-family: 'Courier New', 'Courier', 'Mono', Arial, sans; background:#eeec44; display:block; color:#000; }
+.price_stamp .days{font-size:18px; text-align:right; margin-right:5px; }
+
+#location .ride_meta{width:100px; float:left; margin-left:-78px; margin-top: -15px;}
+.ride_meta{ color:#000; line-height:2em; opacity:0.5; }
+.ride_meta:hover{  opacity:1;}
+
+#location h2.sketch strong{font-size:0.7em; line-height:0.3em; color:#000;}
+
+.ride_meta div{white-space: nowrap;}
+
+#location .row-form .desc{color:#999; }
+
+
+#location .span3.left.well{padding-bottom: 30px; margin-right:10px; margin-left:0px; }
+
+
+body .user-has-loc{display:none;}
+body.user-has-loc #location .user-has-loc{display:block;} /*todo: animate appearance*/
+.sharrre button{float:left; margin-right:10px;}
+
+#location div.row-share, #location div.row-map{display:none;}
+body.user-has-loc #location div.row-share, body.user-has-loc #location div.row-map{display:block;}
+
+#location.loading .fade_while_loading{opacity:0; transition: all 0.1s; }
+#location.loading .hide_while_loading{display:none;}
+#location .loading{display:none;}
+#location.loading .loading{display:block;}
+
+body #location .stamp_price, #loading .desc, #loading .ride_meta{display:none;}
+body #location.has_commute_data .stamp_price, #loading.has_commute_data .desc, #loading.has_commute_data .ride_meta{display:block;}
+
+
+
+
+#location .postcard h2.sent{display:none; font-size:120px; color:#c33; position:relative; top:66px; left:170px; transform:rotate(-15deg) ;}
+.rotate-cw{transform:rotate(90deg);  }
+.rotate-cw.left{transform:rotate(90deg); margin-right:20px;  }
+#location .postcard.done h2.sent{display:block;}
+#location .postcard.done{opacity:0.3;}
+
+#location .postcard h1{float:left; font-size:4em; line-height:0.4em; margin-left:25px;margin-top:25px;}
+img.stamp_icon{float:right; transform:rotate(-7deg);  transition:all 0.3s; width: 87px;
+margin-top: -10px; opacity:0.7;
+margin-bottom: 10px;
+margin-right: -10px;}
+img.stamp_icon:hover{ transform:rotate(10deg);  }
+
+#location .share h4{line-height: 3em; color:#777; }
+#location .share label.red{font-weight:bold }
+/*///////////////////////////////////////////////
+/    RIDES
+////////////////////////////////////////////*/
+#rides .list .item{ background:#ccc; border-radius:3px; }
+
+
+
+/*///////////////////////////////////////////////
+/    footer
+////////////////////////////////////////////*/
+footer.footer{
+  clear:both;
+  margin-top: 45px;
+  padding: 35px 0 36px;
+  border-top: 1px solid #E5E5E5;
+}
+
+
+
+
+
+
+

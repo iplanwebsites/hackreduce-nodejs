@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" xmlns:fb="http://ogp.me/ns/fb#"><head><meta charset="utf-8"><!-- 
+ manifest="cache.manifest22"
+
+
+                 
+        Hello, We hire developers: humans4robots.com  
+              
+                 
+                 
+ --><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+  	<meta name="author" content="">
+    <title>Public Transit data</title>
+    
+     <!-- These are Open Graph tags.  They add meta data to your  -->
+      <!-- site that facebook uses when your content is shared     -->
+      <!-- over facebook.  You should fill these tags in with      -->
+      <!-- your data.  To learn more about Open Graph, visit       -->
+      <!-- 'https://developers.facebook.com/docs/opengraph/'       -->
+      <meta property="og:title" content="That's how we roll! (simple ridesharing)" />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="http://weroll.net" />
+      <meta property="og:image" content="http://weroll.net/img/site_tb.jpg" />
+      <meta property="og:site_name" content="That's how we roll! (simple ridesharing)" />
+      
+      <meta name="google-site-verification" content="xo96U0E5qMXH8AwRcI1mDFhgQP1LuwyP-cbzY4UD3bM" />
+      <!-- <meta property="og:description" content="See how" />-->
+        <!--[if IEMobile]>
+        <link rel="stylesheet" href="mobile.css" media="screen" type="text/css"  />
+        <![endif]-->
+    
+  <!--/////////////////////////////////////////////////////////////////
+ //       CSS
+////////////////////////////////////////////////////////////////-->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="fb_template/fb_template.css" media="Screen" type="text/css" />
+    <link rel="stylesheet" href="fb_template/fb_template_mobile.css" media="handheld, only screen and (max-width: 480px), only screen and (max-device-width: 480px)" type="text/css" />-->
+
+    <!-- FONTS  -->
+    <link rel="stylesheet" href="/fonts/sketchetik_light/stylesheet.css">
+    <link rel="stylesheet" href="/fonts/lekton/stylesheet.css">
+    <link rel="stylesheet" href="/fonts/droid_sans/stylesheet.css">
+    <link rel="stylesheet" href="/fonts/droid_serif/stylesheet.css">
+
+<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,100italic' rel='stylesheet' type='text/css'>
+
+    <!-- LESS styles (bootstrap)  
+    <link rel="stylesheet/less" href="/less/reset.less">
+    <link rel="stylesheet/less" href="/less/bootstrap.less">
+    <link rel="stylesheet/less" href="/less/buttons.less">
+    <link rel="stylesheet/less" href="/less/forms.less">-->
+
+    <!-- CSS  Bootstrap -->
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/less/responsive.css">
+        <!--Compile with this command: 
+          lessc ./less/bootstrap.less > ./css/bootstrap.css  -->
+    
+    <!-- CSS  App -->
+    <link rel="stylesheet" href="/css/share.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/public_transit.css">
+    
+
+
+  
+  </head>
+  <body class="not-logged loading" id="body">
+    <div id="fb-root"></div>
+    <div id="cache"> <div class="loading">
+      <img src="/img/loading1.gif" class=""><br/>
+      <p>Loading...</p></div> 
+    </div>
+
+
+
+
+      <!--/////////////////////////////////////////////////////////////////
+     //        JavaScript
+    ////////////////////////////////////////////////////////////////-->
+       <!-- <script type="text/javascript" src="https://js.stripe.com/v1/"></script> --> 
+       <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+      	<script src="/js/libs/LAB.min.js"></script> <!--  Script Loader-->
+      	
+      	
+      	<script type="text/javascript">
+        var minification = false;
+        if(window.location.hostname == '127.0.0.1'){ debug = true; }else{ debug = false;} 
+        //function log(s){if(debug){return console.log(s);}} //shortcut, local only
+        log = function(s){console.log(s)};
+          $LAB
+          // LIBS
+          .script("/js/libs/modernizr-2.5.3.min.js").wait() 
+          .script("/js/libs/prefixfree.min.js")
+          //.script("/js/libs/prefixfree.dynamic-dom.js")
+          //.script("/js/libs/jquery-1.7.1.min.js").wait()
+          //.script("/js/libs/less-1.3.0.min.js")
+          //.script("/js/libs/pretty.js")
+          // .script("/js/downloadify.min.js")  //download in background...
+          // .script("/js/libs/fullscreenApi.js")
+          //.script("https://js.stripe.com/v1/")
+          .script("/js/libs/jquery.cookie.js")
+          .script("/js/libs/jquery.sharrre-1.3.2.min.js")
+          .script("/js/libs/jquery.cuteTime.min.js")
+          .script("/js/libs/underscore-min.js") 
+          .script("/js/libs/json2.js") //.wait() 
+          .script("/js/libs/sha.js").wait()
+          .script("/js/libs/backbone.js").wait() 
+          // .script("/js/libs/backbone.localStorage.modified.js").wait() // Overide the Sync method, AGAIN!...
+          .script("/js/libs/backbone.analytics.js").wait()
+
+          // Bootstrap
+          .script("/js/libs/bootstrap.min.js")
+          .script("/js/libs/bootstrap-button.js")
+          .script("/js/libs/bootstrap-modal.js")
+          .script("/js/libs/bootstrap-transition.js")
+          
+          //socket IO
+          //.script("/nowjs/now.js") //DO NOT PACK!!! UNIQUELY generated from server
+          
+
+          // APP
+          .wait()
+          
+          
+          .script("/js/app/router.js")
+          .script("/js/app/ui.js")
+          .script("/js/app/cities.js")
+          .script("/js/app/start.js")// instanciation and configuration of main objets*/
+          
+          /*
+            .wait()
+           .script("/js/app.js")  */
+
+       </script>
+       
+       
+      <!--/////////////////////////////////////////////////////////////////
+     //       NAV
+    ////////////////////////////////////////////////////////////////-->
+
+    <div class="navbar navbar-fixed-top thickbar">
+          <div class="navbar-inner">
+            <div class="container-fluid">
+              <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </a>
+              <a class="brand" href="#">
+                
+                <h1>Transit cities</h1>
+                <small>A comparison of public transportation systems</small>
+                </a>
+              <div class="nav-collapse">
+                <ul class="nav">
+                  <li class="active"><a href="#">Home</a></li>
+                  <li><a href="#about">About</a></li>
+                  <li><a href="#contact">Contact</a></li>
+                  
+                  
+                  
+                  <li class="range">
+                    <input type="range" min="0" max="24" value="12" step="1" id="range" />
+                    <strong>22:00</strong>
+                    </li>
+                    
+                  <!-- <li>
+                    <input class="search-input" type="text" id="search-query" placeholder="Search" name="q" autocomplete="off" spellcheck="false"></li>-->
+                  
+                </ul>
+              </div><!--/.nav-collapse -->
+            </div>
+          </div>
+        </div>
+
+
+        <!--/////////////////////////////////////////////////////////////////
+       //       Dashboard
+      ////////////////////////////////////////////////////////////////-->
+
+<ul id="cities">
+  loading cities...
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  ggfd asd
+</ul>
+
+        <!--/////////////////////////////////////////////////////////////////
+       //       Detail
+      ////////////////////////////////////////////////////////////////-->
+
+
+
+
+
+         <!--/////////////////////////////////////////////////////////////////
+       //     Templates - cities
+      ////////////////////////////////////////////////////////////////-->
+
+         <script id="city_template" type="text/x-jquery-tmpl">
+
+
+          <li class="user_<%= id %> city">
+            
+               
+
+               
+               <h1><%= name %></h1>
+               <span class="super hot"><%= population %> persons</span>
+               <div class="clear"></div>
+              
+           </li>
+
+
+            </script>
+
+
+
+           <!--/////////////////////////////////////////////////////////////////
+         //     FINI
+        ////////////////////////////////////////////////////////////////-->
+
+        <script>
+        	var _gaq=[['_setAccount','UA-cxxxxxxxx-7'],['_trackPageview']];  //not
+        	(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        	g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+        	s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+
+
+      </body>
+    </html>
+
+
+
+
+
