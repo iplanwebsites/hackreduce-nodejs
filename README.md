@@ -1,27 +1,3 @@
-Hypothèses à valider avec les stats
-=====================================
-
-Address field is use for city only (missing street address)
-
-User don't authorize app
-
-
-ids:
-
-manu: 837825146
-
-math: 13621012
-
-
-
-
-Facebook/Heroku sample app -- Node.js
-=====================================
-
-This is a sample app showing use of the Facebook Graph API, written in Node.js, designed for deployment to [Heroku](http://www.heroku.com/).
-
-Based on the default node.js facebook template.
-
 
 
 
